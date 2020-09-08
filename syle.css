@@ -40,7 +40,6 @@ nav{
     
 }
 
-
 a{
     text-decoration-line: none;
     color: white;
@@ -50,9 +49,7 @@ a{
 }
 .welcome{
     background-color: #208075;
-    text-align: center;
-    
-    
+    text-align: center; 
 }
 section h1{
     padding-top: 40vh;
@@ -60,5 +57,30 @@ section h1{
 }
 
 @media(max-width:760px){
-
+    nav{
+        position: fixed;
+        display: auto;
+        padding-top: 15px;
+    }
+    section h1{
+        padding-top: 40vh;
+        font-size: 4em;
+    }
+    .welcome{
+        display: auto;
+        height: auto;
+    }
+    #projects{
+        display: flex;
+        flex-direction: column;
+    }
+    .rows{
+        margin-left: 0px;
+        display: flex;
+        width:auto ;
+        flex-direction: column;
+    }
+    img{
+        width: 300px;
+    }
 }
