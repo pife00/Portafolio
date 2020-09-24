@@ -28,10 +28,14 @@ nav{
     margin: 30px;
 }
 .rows{
-    margin-left: 10em;
+    margin-left: 5em;
     display: flex;
     width: 600px;
     flex-direction: row;  
+}
+img{
+    width: 500px;
+    height: 300;
 }
 .project-tile{   
     background-color: #208075;
