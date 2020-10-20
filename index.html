@@ -5,72 +5,142 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./syle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portafolio</title>
 </head>
 
 <body>
-    <nav class="myNav" id="navbar">
-        <a class="nav-link" href="#projects">My Work</a>
-        <a class="nav-link" href="#contact">Contact</a>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light text-center">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="Menu">
+            <ul class="navbar-nav mr-auto nav">
+                <li style="font-size: 25px;" class="nav-item active">
+                    <a  class="nav-link" href="#projects">My Work <span class="sr-only">(current)</span></a>
+                </li>
+                <li style="font-size: 25px;" class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <br>
-    <section class="welcome" id="welcome-section">
-        <h1>Welcome to my page</h1>
+
+
+    <section id="welcome-section">
+
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">Welcome, to my page!</h1>
+        </div>
+
     </section>
+
     <br>
     <section id="projects">
-        <div class="rows">
-            <section id="Tribute" class="project-tile">
-                <a target="_blank" href="https://codepen.io/pife00/pen/poywMMG">
-                    <img src="https://raw.githubusercontent.com/pife00/assets/master/tribute.PNG" alt="tribute">
-                    <p>A Tribute Page</p>
-                </a>
-            </section>
-            <section id="Survey" class="project-tile">
-                <a target="_blank" href="https://codepen.io/pife00/pen/NWNvKYJ">
-                    <img src="https://raw.githubusercontent.com/pife00/assets/master/survey.PNG" alt="survey">
-                    <p>Survey</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <section id="Tribute">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">A tripute Page</div>
+                            <div class="card-body">
+                                <a target="_blank" href="https://codepen.io/pife00/pen/poywMMG">
+                                    <img class="img-fluid"
+                                        src="https://raw.githubusercontent.com/pife00/assets/master/tribute.PNG"
+                                        alt="tribute">
+                                </a>
+                                <h5 class="card-title">A tripute Page</h5>
+                                <p class="card-text">
+                                A page where tell you who is Hellen Adams Keller a wonderful woman 
+                                </p>
+                            </div>
+                        </div>
+                    </section>
 
-                </a>
-            </section>
-        </div>
-        <div class="rows">
-            <section id="TF" class="project-tile">
-                <a target="_blank"  href="https://codepen.io/pife00/pen/ExKbvmE">
-                    <img src="https://raw.githubusercontent.com/pife00/assets/master/page%20Product.PNG" alt="Champion">
-                    <p>A Champion Page</p>
-                </a>
-            </section>
-            <section id="Tribute" class="project-tile">
-                <a target="_blank" href="https://codepen.io/pife00/pen/yLOPQzL">
-                    <img src="https://raw.githubusercontent.com/pife00/assets/master/tech%20page.PNG" alt="Jojo">
-                    <p>A Jojo Page</p>
-                </a>
-            </section>
-        </div>
-        <div class="rows">
-            <section id="CMS" class="project-tile">
-                <a target="_blank" href="http://13.58.107.88">
-                    <img src="https://raw.githubusercontent.com/pife00/assets/master/Blog_Home_-_Start_Bootstrap_Template_-_2020-09-23_22.13.27.png" alt="CMS">
-                    <p>CMS</p>
-                </a>
-            </section>
-        </div>
+                    <section id="Survey">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">A quiz page</div>
+                            <div class="card-body">
+                                <a target="_blank" href="https://codepen.io/pife00/pen/NWNvKYJ">
+                                    <img class="img-fluid"
+                                        src="https://raw.githubusercontent.com/pife00/assets/master/survey.PNG"
+                                        alt="survey">
+                                </a>
+                                <h5 class="card-title">Quiz Page</h5>
+                                <p class="card-text">Just a quiz generic</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-sm">
+                    <section id="TF" class="project-tile">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">A champio Page</div>
+                            <div class="card-body">
+                                <a target="_blank" href="https://codepen.io/pife00/pen/ExKbvmE">
+                                    <img class="img-fluid"
+                                        src="https://raw.githubusercontent.com/pife00/assets/master/page%20Product.PNG"
+                                        alt="Champion">
+                                </a>
+                                <h5 class="card-title">Twisted Fate</h5>
+                                <p class="card-text">This is a page about Twisted fate or TF a champion of lol game.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="Tribute" class="project-tile">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">A jojo Page</div>
+                            <div class="card-body">
+                                <a target="_blank" href="https://codepen.io/pife00/pen/yLOPQzL">
+                                    <img class="img-fluid"
+                                        src="https://raw.githubusercontent.com/pife00/assets/master/tech%20page.PNG"
+                                        alt="Jojo">
+                                </a>
+                                <h5 class="card-title">Jojo Page</h5>
+                                <p class="card-text">This page is very generic.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-sm">
+                    <section id="CMS"></section>
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">A CMS</div>
+                        <div class="card-body">
+                            <a target="_blank" href="http://13.58.107.88">
+                                <img class="img-fluid"
+                                    src="https://raw.githubusercontent.com/pife00/assets/master/Blog_Home_-_Start_Bootstrap_Template_-_2020-09-23_22.13.27.png"
+                                    alt="CMS">
+                            </a>
+                            <h5 class="card-title">CMS page</h5>
+                            <p class="card-text">Here you can public a blog, comment, and register if you want.</p>
+                        </div>
+                    </div>
     </section>
 
-    </div>
     <hr>
     <footer>
         <section style="text-align:center" id="contact">
-            <a id="profile-link" target="_blank" href="https://github.com/pife00">
-                <i class="fa fa-github-alt" style="font-size:96px;"></i>
-                <h2>GitHub</h2>
-            </a>
+            <div class="jumbotron">
+                <a class="navbar-brand" id="profile-link" target="_blank" href="https://github.com/pife00">
+                    <i class="fa fa-github-alt" style="font-size:96px;"></i>
+                    <h1>GitHub</h1>
+                </a>
+            </div>
         </section>
     </footer>
-    
+
 </body>
 
 </html>
