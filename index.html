@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="src/js/bootstrap.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portafolio</title>
 </head>
@@ -48,16 +48,15 @@
     <section id="projects">
         <div id="app">
             <div class="container">
-
+                {{ info[0] }}
                 <div class="row">
-                    <proyectos v-for="obj in proyectosHtml" v-key="obj.id" v-bind:data="obj"></proyectos>
+                    <proyectos v-for="obj in info.proyectosHtml" :key="obj.id" v-bind:data="obj"></proyectos>
                 </div>
             </div>
 
             <div class="container">
                 <div class="row">
-                    <proyectos v-for="obj in proyectosPhp" v-key="obj.id" v-bind:data="obj">
-
+                    <proyectos v-for="obj in info.proyectosPhp" :key="obj.id" v-bind:data="obj">
                 </div>
             </div>
             </proyectos>
@@ -79,74 +78,6 @@
 
 </body>
 
-<script>
-    Vue.component('proyectos', {
-        props: ['data'],
-        template: `
-<div class="col-md-4">
-<div class="card bg-light mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{ data.titulo }}</div>
-    
-        <a target="_blank" :href="data.link">
-            <img class="card-img-top" :src=data.imagen
-                alt="Jojo">
-        </a>
-    <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">{{ data.descripcion }}</p>
-        <b>{{ data.aditional }}</b>
-    </div>
-</div>
-</div>
-
-`
-    });
-
-    var app = new Vue({
-        el: '#app',
-        data: {
-            proyectosHtml: [{
-                    id: 1,
-                    titulo: "A tripute Page",
-                    link: "https://codepen.io/pife00/pen/poywMMG",
-                    imagen: "https://raw.githubusercontent.com/pife00/assets/master/tribute.PNG",
-                    descripcion: "A page where tell you who is Hellen Adams Keller a wonderful woman"
-                },
-                {
-                    id: 2,
-                    titulo: "A quiz page",
-                    link: "https://codepen.io/pife00/pen/NWNvKYJ",
-                    imagen: "https://raw.githubusercontent.com/pife00/assets/master/survey.PNG",
-                    descripcion: "Just a quiz generic"
-                },
-                {
-                    id: 3,
-                    titulo: "A champio Page",
-                    link: "https://codepen.io/pife00/pen/ExKbvmE",
-                    imagen: "https://raw.githubusercontent.com/pife00/assets/master/page%20Product.PNG",
-                    descripcion: "This is a page about Twisted fate or TF a champion of lol game.",
-                },
-                {
-                    id: 4,
-                    titulo: "A Jojo Page",
-                    link: "https://codepen.io/pife00/pen/yLOPQzL",
-                    imagen: "https://raw.githubusercontent.com/pife00/assets/master/tech%20page.PNG",
-                    descripcion: "A generic page about jojo"
-
-                }
-            ],
-
-            proyectosPhp: [{
-                id: 1,
-                titulo: 'A CMS Page',
-                link: "https://cms-pife.herokuapp.com/",
-                imagen: "https://raw.githubusercontent.com/pife00/assets/master/Blog_Home_-_Start_Bootstrap_Template_-_2020-09-23_22.13.27.png",
-                descripcion: "Here you can public a blog, comment, and register if you want",
-                aditional: 'User: liz, Password 123456'
-            }]
-        }
-
-    });
-</script>
+<script type="module" src="src/components/cards.js"></script>
 
 </html>
