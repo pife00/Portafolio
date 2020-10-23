@@ -47,7 +47,7 @@ export default {
                         link:"http://hobbie-tag.herokuapp.com/hobby",
                         imagen:"https://raw.githubusercontent.com/pife00/assets/master/Mi_pagina_Web_-_2020-10-22_13.58.22.png",
                         descripcion:'A little blog of hobbies made laravel and Vue',
-                        aditional: 'User:imapife00,Password:123456789',            
+                        aditional: 'User:imapife00@gmail.com,Password:123456789',            
                     }
                 ],
 }
