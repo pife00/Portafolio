@@ -1,5 +1,15 @@
 export default {
 
+    realProjects: [
+        {
+            id:1,
+            titulo:"Armeva App",
+            link: "https://armeva-app.herokuapp.com/",
+            imagen:"https://raw.githubusercontent.com/pife00/assets/master/ArmevaApp_-_2020-12-29_16.23.57.png",
+            descripcion:"Cash box with graphics"
+        }
+    ],
+
     proyectosHtml: [
                     {
                         id: 1,

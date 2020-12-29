@@ -11,6 +11,19 @@
     <script src="src/js/bootstrap.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portafolio</title>
+
+    <style>
+        .jumbotron{
+        height:50vh
+    }
+    a:hover{
+        color:black
+    }
+    a{
+        color: gray;
+    }
+    </style>
+   
 </head>
 
 <body>
@@ -30,6 +43,9 @@
                 <li style="font-size: 25px;" class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li style="font-size: 25px;" class="nav-item">
+                    <a class="nav-link" href="#anothers">Anothers</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -38,8 +54,8 @@
 
     <section id="welcome-section">
 
-        <div class="jumbotron">
-            <h1 class="display-4 text-center">Welcome, to my page!</h1>
+        <div class="jumbotron ">
+            <h1 class="display-3 text-center mt-5">Welcome, to my page!</h1>
         </div>
 
     </section>
@@ -47,8 +63,20 @@
     <br>
     <section id="projects">
         <div id="app">
+
             <div class="container">
-                {{ info[0] }}
+                <div class="row">
+                    <proyectos v-for="obj in info.realProjects" :key="obj.id" v-bind:data="obj"></proyectos>
+                </div>
+            </div>
+            
+
+            <div id="anothers" class="container">
+                <hr />
+                <h2>Anothers</h2>
+            </div>
+
+            <div class="container">
                 <div class="row">
                     <proyectos v-for="obj in info.proyectosHtml" :key="obj.id" v-bind:data="obj"></proyectos>
                 </div>
@@ -70,7 +98,7 @@
             <div class="jumbotron">
                 <a class="navbar-brand" id="profile-link" target="_blank" href="https://github.com/pife00">
                     <i class="fa fa-github-alt" style="font-size:96px;"></i>
-                    <h1>GitHub</h1>
+                    <h1 style="color:gray">GitHub</h1>
                 </a>
             </div>
         </section>
